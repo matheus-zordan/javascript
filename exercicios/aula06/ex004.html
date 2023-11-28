@@ -20,6 +20,11 @@
         document.write(`Olá ${nome}. Seu nome tem ${nome.length} letras.<br>`)
         document.write(`Seu nome em maiusculo fica: ${nome.toUpperCase()}<br>`)
         document.write(`Seu nome todo minusculo fica: ${nome.toLowerCase()}<br>`)
+        var num = parseFloat(window.prompt('Informe um salario aleatório: <br>'))
+        document.write('Valor informado com o símbolo diversas moedas:<br>')
+        document.write(`${num.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}<br>`)
+        document.write(`${num.toLocaleString('pt-br', { style: 'currency', currency: 'USD' })}<br>`)
+        document.write(`${num.toLocaleString('pt-br', { style: 'currency', currency: 'EUR' })}<br>`)
     </script>
 </body>
 
