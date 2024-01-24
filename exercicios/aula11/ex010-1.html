@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-b">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+
+<body>
+    <h1>Verificando se você é brasileiro ou não</h1>
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="verifica()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function verifica() {
+            var txtpais = document.querySelector('input#txtpais')
+            var res = document.querySelector('div#res')
+            var pais = txtpais.value.toLowerCase()
+
+            res.innerHTML = `<p>Você é do(a) ${pais}</p>`
+
+            if (pais == 'brasil') {
+                res.innerHTML += `<p>Você é brasileiro(a)</p>`
+            } else {
+                res.innerHTML += `<p>Você é gringo</p>`
+            }
+        }
+    </script>
+</body>
+
+</html>
