@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenação</title>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('insira seu nome')
+        var sobrenome = window.prompt('insira seu sobrenome')
+        window.alert('seu nome completo é , ' +nome+ ' ' +sobrenome+'')
+
+        var nome2 = window.prompt('insira o nome da sua mae')
+        var sobrenome2 = window.prompt('insira o sobrenome')
+        var resultado = nome2.concat("", sobrenome2)
+        window.alert('o nome da sua mãe completo é'  +resultado)
+
+        var nome3 = window.prompt('insira o nome do seu pai')
+        var sobrenome3 =  window.prompt('insira o sobrenome')
+        window.alert(`o nome completo do seu pai é ${nome3} ${sobrenome3}`)
+    </script>
+</body>
+</html>

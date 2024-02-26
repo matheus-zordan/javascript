@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudando o DOM</title>
+</head>
+
+<body>
+    <h1>Olá</h1>
+    <p id="paragrafo">
+
+    </p>
+    <h3 class="texto">
+
+    </h3>
+
+    <p>
+        <label for="fname">Primeiro Nome</label>
+        <input type="text" name="fname">
+        <label for="fname">Segundo Nome</label>
+        <input type="text" name="fname">
+    </p>
+    <p id="demo">
+
+    </p>
+
+    <p id="demo2">
+
+    </p>
+
+    <p id="demo3">
+
+    </p>
+
+    <div>
+    
+    </div>
+
+    <script>
+        document.getElementById("paragrafo").innerHTML = "Estou escrevedo esse paragrafo utilizando o getElementById"
+
+        var p = document.getElementsByClassName("texto")
+        p[0].innerHTML = "Estou escrevendo esse parágrafo com o getElementsByClassName"
+
+
+        var elemento = document.getElementsByName("fname")
+        document.getElementById("demo").innerHTML = elemento[0].tagName
+
+        var elemento2 = document.getElementsByName("fname").length
+        document.getElementById("demo2").innerHTML = elemento2
+
+        var d = document.getElementsByTagName("p")
+        for (var i = 0; i < d.length; i++) {
+            d[i].style.color = "red"
+        }
+
+        var divisao = document.getElementsByTagName("div")[0]
+        divisao.innerHTML =  'teste'
+        divisao.style.color = "green"
+        divisao.style.background = "black"
+        divisao.style.fontSize = "50px"
+
+        
+    </script>
+</body>
+
+</html>
