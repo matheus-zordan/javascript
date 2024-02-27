@@ -32,6 +32,7 @@
         <li>Chororo</li>
         <li>Filho</li>
     </ul>
+    <button onclick="inserindoAntes()">Clique aqui</button>
     <script>
         function adicionar() { //nessa função, estamos adicionando uma novo elemento a lista 1
             var novaLista = document.createElement("li")
@@ -46,7 +47,10 @@
         }
 
         function inserindoAntes(){
-            
+        var newList = document.getElementById("li")
+        var newText = document.createTextNode("Campeonato Carioca")
+        var list = document.getElementById("lista3")
+        list.insertBefore(newText, list.children[0])
         }
     </script>
 </body>
