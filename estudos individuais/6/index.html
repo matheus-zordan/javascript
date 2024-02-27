@@ -25,17 +25,28 @@
         <li>Abacate</li>
     </ul>
     <button onclick="mover()">Clique aqui para mover as frutas dessa lista para a de cima</button>
+
+    <ul id="lista3">
+        <li>Flamengo</li>
+        <li>Basco</li>
+        <li>Chororo</li>
+        <li>Filho</li>
+    </ul>
     <script>
-        function adicionar() {
+        function adicionar() { //nessa função, estamos adicionando uma novo elemento a lista 1
             var novaLista = document.createElement("li")
             var novoItem = document.createTextNode("Limão")
             novaLista.appendChild(novoItem)
             document.getElementById("lista").appendChild(novaLista)
         }
 
-        function mover(){
+        function mover(){ //nessa função, estamos movendo o ultimo elemento da lista 2 para a lista 1
             var movedora = document.getElementById("lista2").lastElementChild // Pode tambem usar o firstElementChild
             document.getElementById("lista").appendChild(movedora)
+        }
+
+        function inserindoAntes(){
+            
         }
     </script>
 </body>
