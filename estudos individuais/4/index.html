@@ -38,29 +38,51 @@
     
     </div>
 
+    <div id="pai">
+        <div id="filho">
+            Esse é um paragrafo filho
+        </div>
+    </div>
+
     <script>
+        //Testando o getElementById
         document.getElementById("paragrafo").innerHTML = "Estou escrevedo esse paragrafo utilizando o getElementById"
 
+        //Testando o getElementByClass
         var p = document.getElementsByClassName("texto")
         p[0].innerHTML = "Estou escrevendo esse parágrafo com o getElementsByClassName"
 
-
+        //Testando o getElementByName
         var elemento = document.getElementsByName("fname")
         document.getElementById("demo").innerHTML = elemento[0].tagName
 
         var elemento2 = document.getElementsByName("fname").length
         document.getElementById("demo2").innerHTML = elemento2
 
+        //TEstando o getElementByTagName
         var d = document.getElementsByTagName("p")
         for (var i = 0; i < d.length; i++) {
             d[i].style.color = "red"
         }
-
         var divisao = document.getElementsByTagName("div")[0]
         divisao.innerHTML =  'teste'
         divisao.style.color = "green"
         divisao.style.background = "black"
         divisao.style.fontSize = "50px"
+
+        //Testando o removeChild
+        var pai = document.getElementById("pai")
+        var filho =  document.getElementById("filho")
+        pai.removeChild(filho)
+
+        //Testando o createElement
+
+        var novoParagrafo = document.createElement("p")
+        novoParagrafo.innerHTML = "novo paragrafo criado"
+        var pai = document.getElementById("pai")
+        pai.appendChild(novoParagrafo)
+
+
 
         
     </script>
