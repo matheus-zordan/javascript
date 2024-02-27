@@ -41,16 +41,16 @@
             document.getElementById("lista").appendChild(novaLista)
         }
 
-        function mover(){ //nessa função, estamos movendo o ultimo elemento da lista 2 para a lista 1
+        function mover() { //nessa função, estamos movendo o ultimo elemento da lista 2 para a lista 1
             var movedora = document.getElementById("lista2").lastElementChild // Pode tambem usar o firstElementChild
             document.getElementById("lista").appendChild(movedora)
         }
 
-        function inserindoAntes(){
-        var newList = document.getElementById("li")
-        var newText = document.createTextNode("Campeonato Carioca")
-        var list = document.getElementById("lista3")
-        list.insertBefore(newText, list.children[0])
+        function inserindoAntes() {
+            var newList = document.getElementById("li")
+            var newText = document.createTextNode("Campeonato Carioca")
+            var list = document.getElementById("lista3")
+            list.insertBefore(newText, list.children[0])
         }
     </script>
 </body>
