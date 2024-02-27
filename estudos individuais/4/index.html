@@ -35,7 +35,7 @@
     </p>
 
     <div>
-    
+
     </div>
 
     <div id="pai">
@@ -43,6 +43,17 @@
             Esse é um paragrafo filho
         </div>
     </div>
+
+    <ul id="minhaLista">
+        <li id="item1">Item antigo</li>
+        <li id="item2">Item 2</li>
+        <li id="item3">Item 3</li>
+    </ul>
+
+    <div id="container">
+        Conteudo atual
+    </div>
+
 
     <script>
         //Testando o getElementById
@@ -65,26 +76,39 @@
             d[i].style.color = "red"
         }
         var divisao = document.getElementsByTagName("div")[0]
-        divisao.innerHTML =  'teste'
+        divisao.innerHTML = 'teste'
         divisao.style.color = "green"
         divisao.style.background = "black"
         divisao.style.fontSize = "50px"
 
         //Testando o removeChild
         var pai = document.getElementById("pai")
-        var filho =  document.getElementById("filho")
+        var filho = document.getElementById("filho")
         pai.removeChild(filho)
 
         //Testando o createElement
-
         var novoParagrafo = document.createElement("p")
         novoParagrafo.innerHTML = "novo paragrafo criado"
         var pai = document.getElementById("pai")
         pai.appendChild(novoParagrafo)
 
+        //Testando o replaceChild
+        var novoItem = document.createElement("li")
+        novoItem.innerHTML = "novo item"
+        var lista = document.getElementById("minhaLista")
+        var itemASubstituir = document.getElementById("item1")
+        lista.replaceChild(novoItem, itemASubstituir)
 
+        //Testando o innerHTML
+        var pegando = document.getElementById("container")
+        pegando.innerHTML = 'Meu novo conteúdo'
+        pegando.innerHTML += '<br>adicionando mais conteudo'
 
-        
+        //Testando o style
+        var estilo = document.getElementById("container")
+        estilo.style.backgroundColor = "red"
+        estilo.style.fontSize = "25px"
+        estilo.style.border = "2px solid black"
     </script>
 </body>
 
