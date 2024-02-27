@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body id="corpo">
     <button id="meuBotao">Clique em mim</button>
     <button id="texto">Clique aqui para gerar um paragrafo</button>
@@ -14,16 +16,17 @@
 </body>
 
 <script>
-    function clicar(){
+    function clicar() {
         document.body.style.backgroundColor = "red"
     }
-    function clique(){
+    function clique() {
         document.getElementById("paragrafo").innerHTML = "ola"
     }
     var botao = document.getElementById("meuBotao")
     botao.addEventListener("click", clicar)
 
     var botao2 = document.getElementById("texto")
-    botao2.addEventListener("click",clique)
+    botao2.addEventListener("click", clique)
 </script>
+
 </html>
