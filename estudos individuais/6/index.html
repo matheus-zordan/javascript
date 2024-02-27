@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppendChild</title>
+</head>
+
+<body>
+    <h1>Estudando AppendChild</h1>
+    <ul id="lista">
+        <li>Morango</li>
+        <li>Maca</li>
+        <li>Uva</li>
+        <li>Banana</li>
+        <li>Laranja</li>
+    </ul>
+    <button onclick="adicionar()">Clique aqui para adiconar um novo elemento na lista</button>
+    <ul id="lista2">
+        <li>Pera</li>
+        <li>Morango</li>
+        <li>Gilo</li>
+        <li>Mamão</li>
+        <li>Abacate</li>
+    </ul>
+    <button onclick="mover()">Clique aqui para mover as frutas dessa lista para a de cima</button>
+    <script>
+        function adicionar() {
+            var novaLista = document.createElement("li")
+            var novoItem = document.createTextNode("Limão")
+            novaLista.appendChild(novoItem)
+            document.getElementById("lista").appendChild(novaLista)
+        }
+
+        function mover(){
+            var movedora = document.getElementById("lista2").lastElementChild
+            document.getElementById("lista").appendChild(movedora)
+        }
+    </script>
+</body>
+
+</html>
