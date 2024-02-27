@@ -5,14 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #box{
+            background-color: green;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 30px;
+            color: white;
+        }
+    </style>
 </head>
 
 <body id="corpo">
     <button id="meuBotao">Clique em mim</button>
     <button id="texto">Clique aqui para gerar um paragrafo</button>
-    <p id="paragrafo">
+    <p id="paragrafo"></p>
 
-    </p>
+    <div id="box">
+        Interaja...
+    </div>
 </body>
 
 <script>
@@ -27,6 +41,27 @@
 
     var botao2 = document.getElementById("texto")
     botao2.addEventListener("click", clique)
+
+    var caixa = document.getElementById("box")
+    box.addEventListener("mouseover",pfuncao)
+    box.addEventListener("mouseout",sfuncao)
+    box.addEventListener("click",tfuncao)
+
+    function pfuncao(){
+        document.getElementById("box").innerHTML = "entrou"
+        document.getElementById("box").style.backgroundColor = "red"
+    }
+
+    function sfuncao(){
+        document.getElementById("box").innerHTML = "saiu"
+        document.getElementById("box").style.backgroundColor = "blue"
+    }
+
+    function tfuncao(){
+        document.getElementById("box").innerHTML = "clicou"
+        document.getElementById("box").style.backgroundColor = "green"
+    }
+    
 </script>
 
 </html>
