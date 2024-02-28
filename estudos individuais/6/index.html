@@ -34,7 +34,7 @@
     </ul>
     <button onclick="inserindoAntes()">Clique aqui</button>
     <script>
-        function adicionar() { //nessa função, estamos adicionando uma novo elemento a lista 1
+        function adicionar() { //nessa função, estamos adicionando uma novo elemento a lista 1. Com o appendChild, o elemento sempre sera inserido como o ultimo filho
             var novaLista = document.createElement("li")
             var novoItem = document.createTextNode("Limão")
             novaLista.appendChild(novoItem)
@@ -46,7 +46,7 @@
             document.getElementById("lista").appendChild(movedora)
         }
 
-        function inserindoAntes() {
+        function inserindoAntes() { //nessa função, estamos inserindo uma palavra na posição 0 da lista. Caso queiramos adiconar em outra posição, so mudar o valor.
             var newList = document.getElementById("li")
             var newText = document.createTextNode("Campeonato Carioca")
             var list = document.getElementById("lista3")
