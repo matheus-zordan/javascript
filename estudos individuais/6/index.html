@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AppendChild</title>
+    <style>
+
+    </style>
 </head>
 
-<body>
+<body onclick="elementoAtivo()">
     <h1>Estudando AppendChild</h1>
     <ul id="lista">
         <li>Morango</li>
@@ -33,8 +36,21 @@
         <li>Filho</li>
     </ul>
     <button onclick="inserindoAntes()">Clique aqui</button>
+    <div id="elemento">
+        <h1>Testando a propriedade activeElement.</h1>
+        <p>Ela é uma propriedade de leitura, e retorna o elemento ativo.</p>
+        <button>Clique aqui ou em qualquer lugar da página</button>
+        <input type="checkbox" name="" id="">
+        <a href="#">Clique Aqui</a>
+    </div>
+    <p id="demo">
+
+    </p>
+
     <script>
-        function adicionar() { //nessa função, estamos adicionando uma novo elemento a lista 1. Com o appendChild, o elemento sempre sera inserido como o ultimo filho
+        //nessa função, estamos adicionando uma novo elemento a lista 1. 
+        //Com o appendChild, o elemento sempre sera inserido como o ultimo filho
+        function adicionar() {
             var novaLista = document.createElement("li")
             var novoItem = document.createTextNode("Limão")
             novaLista.appendChild(novoItem)
@@ -51,6 +67,11 @@
             var newText = document.createTextNode("Campeonato Carioca")
             var list = document.getElementById("lista3")
             list.insertBefore(newText, list.children[0])
+        }
+
+        function elementoAtivo() {
+            var ativo = document.activeElement.tagName
+            document.getElementById("demo").innerHTML = ativo
         }
     </script>
 </body>
