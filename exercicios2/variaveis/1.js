@@ -4,20 +4,18 @@
 // Hoisting: Variáveis var são "hoistadas" para o topo do seu escopo, o que significa que você pode usar a variável antes de declará-la.
 // Redeclaração e reatribuição: Pode ser redeclarada e reatribuída dentro do seu escopo.
 
-var nome = "Matheus"
-
 function exibirDados() {
-    console.log(nome)
-    var sobrenome = "Zordan"
-    console.log(sobrenome)
-    var idade = 27
+    var idade = 19
+    if (idade < 20){
+        var idade = 20
+        console.log(idade)
+    }
     console.log(idade)
 }
 exibirDados()
 
 var calculo = (a, b) => a - b
 console.log(calculo(10, 5))
-
 
 //Let
 // Escopo: De bloco. Uma variável let só pode ser acessada dentro do bloco em que foi declarada (por exemplo, dentro de um if, for ou função).
@@ -34,7 +32,6 @@ function exibiCor() {
     console.log(cor); // Saída: azul
 }
 exibiCor()
-
 
 let somatorio = (a, b) => a + b
 console.log(somatorio(1, 1))
