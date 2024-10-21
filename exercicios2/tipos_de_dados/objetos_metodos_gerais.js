@@ -1,4 +1,4 @@
-//OBJETO
+//CRIANDO UM OBJETO
 const pessoa = {
     nome: "Matheus",
     idade: 27,
@@ -15,7 +15,7 @@ console.log(pessoa)
 console.log(pessoa2)
 
 
-//FUNÇÃO CONSTRUTORA DE UM OBJETO
+//FUNÇÃO CONSTRUTORA DE UM OBJETO - ESSA VERSÃO É MELHOR DO QUE O MODO DE CRIAR ACIMA
 function Pessoa(nome, idade, sexo) {
     this.nome = nome
     this.idade = idade
@@ -25,6 +25,7 @@ const pai = new Pessoa("José", 60, "Masculino")
 const filho = new Pessoa("Matheus", 27, "Masculino")
 
 //Métodos de objeto JavaScript
+
 //1- JavaScript Object.assign()
 //O método copia propriedades de um ou mais objetos de origem para um objeto de destino.Object.assign()
 
@@ -82,7 +83,7 @@ let texto = Object.values(person);
 console.log(texto)
 
 
-// JavaScript Object.groupBy()
+//5- JavaScript Object.groupBy()
 // ES2024 adicionou o método ao JavaScript.Object.groupBy()
 // O método agrupa elementos de um objeto de acordo com os valores de string retornados de uma função de retorno de chamada.Object.groupBy()
 // O método não altera o objeto original.Object.groupBy()
@@ -106,7 +107,7 @@ console.log(texto)
 // const resultado = Object.groupBy(frutas,teste)
 // console.log(resultado)
 
-// JavaScript Object.keys()
+//6- JavaScript Object.keys()
 // O método retorna uma matriz com as chaves de um objeto.Object.keys()
 const dados = {
     firstName: "John",
@@ -118,7 +119,7 @@ const dados = {
 const keys = Object.keys(dados);
 console.log(keys)
 
-//Object.create()
+//7- Object.create()
 // O método estático Object.create() cria um novo objeto, usando um objeto existente como o protótipo do objeto recém-criado
 const carro = {
     marca:"honda",
