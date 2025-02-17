@@ -20,6 +20,7 @@ x = s.toLocaleLowerCase();
 x = s.toUpperCase();
 x = s.charAt(6);
 x = s.indexOf("M");
+console.log(x);
 x = s.substring(0, 5);
 x = s.substring(2);
 x = s.slice(-2);
@@ -28,5 +29,5 @@ x = "             Matheus";
 x = x.trim();
 
 x = s.replace("Matheus", "Flamengo");
-x = s.includes("theus");
-console.log(x);
+x = s.includes("r");
+
